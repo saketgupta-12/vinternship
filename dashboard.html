@@ -898,17 +898,18 @@ async function viewHpDetail(email) {
       </tr>
   `;
 
-  (data.breakdown || []).forEach(r => {
-    html += `
-      <tr>
-        <td>${r.AppliedDate}</td>
-        <td>${r.SourceRef}</td>
-        <td class="num">${r.AppliedPercent}%</td>
-        <td class="num">${Number(r.CurrentHPBefore).toFixed(2)}</td>
-        <td class="num">${Number(r.CurrentHPAfter).toFixed(2)}</td>
-      </tr>
-    `;
-  });
+(data.breakdown || []).forEach(r => {
+  html += `
+    <tr>
+      <td>${r.appliedDate}</td>
+      <td>${r.sourceRef}</td>
+      <td class="num">${r.appliedPercent}%</td>
+      <td class="num">${Number(r.currentHPBefore).toFixed(2)}</td>
+      <td class="num">${Number(r.currentHPAfter).toFixed(2)}</td>
+    </tr>
+  `;
+});
+
 
   html += "</table>";
 

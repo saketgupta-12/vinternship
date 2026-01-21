@@ -45,4 +45,7 @@ collections:
   projects:
     output: true
     permalink: /projects/:slug/
+  cohorts:
+    output: true
+    permalink: /:name/
 
